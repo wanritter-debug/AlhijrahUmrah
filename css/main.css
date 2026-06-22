@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Prompt", sans-serif;
+}
+
+้.header {
+    background-color: #ffff;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+nav {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+
+}
+
+.logo img {
+    height: 50px;
+    display: block;
+}   
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 800px;
+    margin: 0;
+    padding: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul li{
+    margin-right: 51px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    border-radius: 14px;
+    display: inline-block;
+}
+
+nav ul li a.active {
+    background-color: #1B5E20;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 14px;
+    display: inline-block;
+}
+
+.container2 {
+    max-width: 100%;
+    height: 534px;
+    background: url('../img/bg-header.svg') no-repeat;
+    background-size: cover; 
+    background-position: center;
+}
+
+.header-info {
+    max-width: 1140px;
+    margin:  0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    padding-right: 100px;
+    padding-bottom: 413px;
+
+}
+
+.header-title h1 {
+    font-size: 32px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.package-section-fluid {
+    display: flex;
+    width: 100%;
+    margin-top: 166px; 
+    padding-bottom: 100px;
+}
+
+/* --- จัดการฝั่งซ้าย (รูปภาพ) --- */
+.package-image {
+    flex: 1;            /* แบ่งพื้นที่ฝั่งซ้าย */
+    display: flex;
+    justify-content: flex-start; /* สั่งให้ชิดซ้ายสุดของเว็บบราวเซอร์ */
+    position: relative;
+}
+
+.image-bg {
+    width: 763px;
+    height: 1036px;           /* ปรับความกว้างของกล่องเทาตามความเหมาะสม */
+    background-color: #D9D9D9;  /* ใส่สีเทาอ่อนแบบในดีไซน์ */
+    border-radius: 141px; /* มนเฉพาะด้านขวา ส่วนด้านซ้ายตัดตรงชนขอบจอ */
+    position: relative;         
+    display: block;
+}
+
+.package-image img {
+    width: 741px;
+    height: 1113px;
+    object-fit: cover;
+    border-radius: 141px; /* 🟢 ทำมุมโค้งมนขนาดใหญ่แบบในรูปตัวอย่าง */
+    position: absolute;
+    top: -45px;
+    left: 125px;
+}
+
+/* --- จัดการฝั่งขวา (เนื้อหา) --- */
+.package-content {
+    flex: 1;                    /* แบ่งพื้นที่ฝั่งขวา */
+    display: flex;
+    flex-direction: column;     /* สั่งให้เนื้อหาเรียงจาก บน-ลง-ล่าง */
+    padding-left: 140px;        /* เว้นระยะห่างหลบจากรูปภาพฝั่งซ้าย */
+    padding-right: 10%;         /* เว้นระยะฝั่งขวาไว้ 10% กันข้อความหลุดขอบจอ */
+    padding-top: 112px;          /* ดันหัวข้อลงมาให้เริ่มในระดับเดียวกับรูปภาพตึก */
+}
+
+.package-content h2 {
+    font-size: 35px;
+    font-weight: 380;
+    color: #111111;
+    margin-bottom: 85px; /* เว้นระยะจากหัวข้อลงมาหาไอคอน */
+}
+
+
+/* --- เพิ่มเติม: จัดกลุ่มกล่องไอคอนบริการให้สวยงามตามแบบ --- */
+.servive-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 27px;                  /* ระยะห่างระหว่างกล่องไอคอน */
+    margin-bottom: 35px;
+}
+
+/* สร้างกล่องสีเทาอ่อนขอบโค้งมนรอบไอคอน */
+.icon-item {
+    width: 85px;
+    height: 85px;
+    background-color: #D9D9D9;  
+    border-radius: 24px;        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.icon-item img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    position: absolute;
+    bottom: -18px;
+    right: -18px;
+}
+
+/* ข้อความอธิบายรายละเอียด */
+.package-detail {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #555555;
+    margin-top: 95px;
+    margin-bottom: 75px;
+}
+
+/* โซนราคา */
+.package-price {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;    /* จัดให้ตัวหนังสือทุกคำอยู่ในแนวราบตรงกัน */
+    padding-left: 110px;     /* ใช้ padding-left แทน margin เพื่อดันให้ขยับไปทางขวา */
+}
+
+.package-price span {
+    font-size: 24px;
+    font-weight: 380;
+    color: #000000;             /* สีเขียวสำหรับตัวเลขราคา */
+    margin: 0 5px;
+}
+
+/* ปุ่มรายละเอียดเพิ่มเติม */
+.btn-more {
+    align-self: flex-start;     /* สั่งให้ปุ่มกว้างเท่าตัวอักษร ไม่ขยายกว้างเต็มจอ */
+    background-color: #1B5E20;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 14px 36px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    margin-left: 110px;
+}
+
+.btn-more:hover {
+    background-color: #123F16;  /* เข้มขึ้นเมื่อเอาเมาส์ไปชี้ */
+}
+
+.diy-section-fluid {
+    display: flex;
+    width: 100%;
+    max-width: 100%;         /* มั่นใจว่าไม่มีอะไรมาจำกัดความกว้าง */
+    margin-top: 166px;     /* เว้นระยะห่างลงมาจากส่วน Full Package ข้างบน */
+    padding-bottom: 100px;
+    overflow: visible;        /* ป้องกันไม่ให้ภาพส่วนเกินดันหน้าเว็บจนเกิดสกรอลบาร์แนวนอน */
+}
+
+/* ควบคุมพื้นที่ฝั่งข้อความ DIY (ฝั่งซ้าย) */
+.diy-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;     /* เว้นระยะฝั่งซ้ายจอ */
+    padding-right: 40px;  /* ดันระยะห่างจากขอบรูปภาพฝั่งขวา */
+    padding-top: 112px;    /* ปรับระดับความสูงให้บาลานซ์กับกล่องรูป */
+}
+
+.diy-content h2 {
+    margin-left: 165px;    /* ปรับเพิ่ม-ลดตัวเลขพิกเซลได้ตามต้องการ */
+    margin-top: 50px
+
+    
+}
+
+.diy-content .servive-icons {
+    margin-left: 220px;    /* ใส่ตัวเลขให้เท่ากับตัวบน เพื่อให้แนวตั้งตรงกันพอดี */
+}
+
+/* ขยับราคาฝั่ง DIY ให้ชิดซ้ายตรงกับหัวข้อ */
+.diy-price {
+    padding-left: 170px !important;
+}
+
+.diy-price span {
+    font-size: 24px;
+    font-weight: 380;
+    color: #000000;
+}
+
+/* ล้างระยะเยื้องซ้ายของปุ่ม เพื่อให้ตรงกับโครงสร้างฝั่งซ้าย */
+.diy-btn {
+    margin-left: 168px !important;
+}
+
+/* ควบคุมพื้นที่รูปภาพฝั่ง DIY (ฝั่งขวา) */
+.diy-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* ผลักรูปให้ไปชิดขวาสุดของหน้าจอ */
+    position: relative;
+}
+
+/* กล่องสีเทาหลังรูป มนเฉพาะด้านซ้าย */
+.image-bg-reverse {
+    width: 763px;
+    height: 1036px;
+    background-color: #D9D9D9;
+    border-radius: 141px; /* มนเฉพาะด้านซ้ายบนและซ้ายล่าง */
+    position: relative;
+    display: block;
+}
+
+/* จัดตำแหน่งรูปภาพบนกล่องเทา */
+.image-bg-reverse img {
+    width: 736px;
+    height: 1210px;
+    object-fit: cover;
+    border-radius: 141px;
+    position: absolute;
+    top: -118px;
+    left: -50px; /* สั่งขยับอิงจากขอบขวาเข้ามา */
+}
+
+.package-section-fluid-plus {
+    display: flex;
+
+    width: 100%;
+    margin-top: 150px; 
+    padding-bottom: 100px;
+}
+
+/* --- 🟢 ฝั่งขวา: ใช้พลัง Flexbox สั่งให้เนื้อหาเรียงกึ่งกลางทั้งหมด 🟢 --- */
+.package-content-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;     /* จัดเรียงวัตถุจากบนลงล่าง */
+    align-items: center;        /* 🌟 บังคับให้อาวุธทุกชิ้น (H2, ไอคอน, ปุ่ม) อยู่ "กึ่งกลาง" */
+    text-align: center;         /* บังคับตัวหนังสือในแท็ก <p> ให้กระจายกึ่งกลางสวยงาม */
+    padding-left: 80px;         
+    padding-right: 80px;        
+    padding-top: 180px;          
+}
+
+/* หัวข้อแบบบาง (Light) ตามดีไซน์ล่าสุด */
+.package-content-center h2 {
+    font-size: 32px;
+    font-weight: 300;           /* ใช้ฟอนต์ผอมบาง ทันสมัย */
+    color: #111111;
+    margin-bottom: 30px;
+}
+
+/* --- ส่วนจัดการกล่องไอคอนเดี่ยว + เครื่องหมายบวก --- */
+.service-icon-plus {
+    display: flex;
+    align-items: center;        /* จัดระดับให้ไอคอนและเครื่องหมายบวกขนานกันในแนวตั้ง */
+    gap: 15px;                  /* ระยะห่างระหว่างกล่องไอคอนกับเครื่องหมายบวก */
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-left: 23px; /* 🟢 ปรับตัวเลขนี้ตามความต้องการครับ ตัวเลขยิ่งมาก กลุ่มไอคอนจะยิ่งขยับไปทางขวา */
+}
+
+/* ตัวอักษรเครื่องหมายบวกด้านข้างกล่องเทา */
+.plus-img-sign {
+    width: 60px; /* ปรับขนาดความกว้าง-สูงของเครื่องหมายบวกตามต้องการ */
+    height: 60px;
+    transform: translateY(-10px); /* 🟢 ตัวเลขติดลบยิ่งมาก รูปจะยิ่งลอยสูงขึ้น ลองปรับทดสอบดูครับ */
+    margin-left: -8px; /* ตัวเลขติดลบยิ่งมาก เครื่องหมายจะยิ่งขยับซ้าย ลองปรับเพิ่ม-ลดตามความชื่นชอบได้เลย ครับ */
+}
+
+
+/* ข้อความอธิบายเนื้อหา (จำกัดความกว้างเพื่อให้อ่านง่ายและตัดคำสวยงาม) */
+.package-content-center .package-detail {
+    max-width: 620px;           /* 🌟 ล็อกความกว้างบล็อกตัวอักษร ไม่ให้แผ่ยาวเต็มจอจนอ่านยาก */
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #333333;
+    margin-bottom: 35px;
+    margin-top: 45px; /* 🟢 ตัวเลขติดลบยิ่งมาก ข้อความจะยิ่งขยับขึ้นไปชิดไอคอนด้านบน ลองปรับตัวเลขตามความเหมาะสมได้เลยครับ */
+}
+
+/* ส่วนแสดงราคา (ปรับเป็นสีดำตามแบบภาพล่าสุดของคุณ) */
+.package-content-center .package-price {
+    font-size: 24px;
+    font-weight: 300;
+    color: #111111;
+    margin-bottom: 35px;
+    margin-right: 70px; /* 🟢 ตัวเลขยิ่งมาก ข้อความจะยิ่งขยับไปทางซ้าย ลองปรับทดสอบระยะดูได้เลยครับ */
+}
+
+.package-content-center .package-price span {
+    font-size: 24px;
+    font-weight: 300;
+    color: #111111;             /* ตัวเลขราคาเป็นสีดำหนา */
+}
+
+/* คัดลอกส่วนนี้ไปวางท้ายสุดของไฟล์ main.css ได้เลยครับ */
+.package-content-center .btn-more {
+    margin-left: 210px; /* 🟢 ตัวเลขยิ่งมาก ปุ่มของ อุมเราะห์ Plus จะยิ่งขยับไปทางขวา */
+}
+
+.site-footer {
+    width: 100%;
+    background-color: #FFFFFF;
+    margin-top: 50px; /* เว้นระยะจากเนื้อหาทริปอุมเราะห์ด้านบน */
+    
+}
+
+.footer-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+/* 🟢 จุดสำคัญ: สั่งขยับบล็อกข้อมูลทั้งหมดให้ตรงตามกรอบสีแดงของคุณ */
+.footer-info {
+    margin-left: 20%; /* 🟢 ขยับบล็อกข้อความมาทางขวา ปรับเปอร์เซ็นต์เพิ่ม-ลดได้ตามต้องการครับ */
+    text-align: left; /* บังคับให้ข้อความชิดซ้ายของบล็อกเพื่อความเรียบร้อย */
+}
+
+/* จัดการลักษณะฟอนต์ของใบอนุญาต 5 บรรทัดแรก */
+.footer-info p {
+    font-size: 14px;
+    font-weight: 400; /* ฟอนต์บางตามสไตล์ดีไซน์ */
+    color: #111111;
+    line-height: 1.8; /* ระยะห่างระหว่างแต่ละบรรทัดให้โปร่งสวยงาม */
+    margin: 0 0 4px 0;
+}
+
+/* 🟢 ลบสไตล์ .footer-info .footer-address ของเดิมออก แล้วแทนด้วยชุดนี้ครับ */
+
+.footer-address {
+    display: flex;             /* บังคับให้หัวข้อและข้อความต่อแนวนอน */
+    align-items: flex-start;   /* จัดให้เยื้องขึ้นด้านบนเสมอกัน */
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+}
+
+/* ล็อกขนาดความกว้างหัวข้อด้านหน้าให้กว้างเท่ากัน เพื่อดันให้เครื่องหมายโคลอนตรงกัน */
+.address-title {
+    width: 95px;              /* 🟢 บังคับให้ช่องข้อความด้านหน้ากว้างเท่านี้ ตัวโคลอนจะตรงกันเป๊ะ */
+    display: inline-block;
+    flex-shrink: 0;
+    color: #111111;
+}
+
+/* ล็อกพื้นที่ข้อความที่อยู่ฝั่งขวา */
+.address-text {
+    flex: 1;
+    color: #111111;
+}
+
+/* ดันระยะห่างก่อนเริ่มบรรทัดเบอร์โทรศัพท์ */
+.footer-info .footer-phone {
+    margin-top: 25px; 
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* จัดแนวไอคอนโทรศัพท์และเบอร์ให้ขนานกัน */
+.footer-info .footer-phone {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-phone-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+/* แถบสีเทา Copyright */
+.footer-bottom {
+    background-color: #D9D9D9;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: #333333;
+    margin: 0;
+}
+
+/* 🟢 เพิ่มโค้ดชุดนี้ไว้ท้ายสุดของไฟล์ main.css ได้เลยครับ */
+
+.footer-address {
+    display: flex;            /* สั่งให้หัวข้อกับที่อยู่เรียงแนวนอน */
+    align-items: flex-start;  /* จัดให้ด้านบนตรงกัน */
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+/* ล็อกความกว้างของโซนหัวข้อด้านหน้า */
+.address-title {
+    width: 90px;             /* 🟢 ปรับเพิ่ม-ลดตัวเลขนี้ได้เพื่อให้พื้นที่พอดีกับคำว่า "สำนักงาน :" */
+    display: inline-block;
+    flex-shrink: 0;          /* ป้องกันไม่ให้บล็อกหัวข้อยืดหด */
+    text-align: left;        /* จัดให้ชิดซ้าย */
+}
+
+/* ข้อความตัวที่อยู่ */
+.address-text {
+    flex: 1;                 /* ให้ข้อความที่อยู่กินพื้นที่ที่เหลือทั้งหมด */
+}
+
+/* สั่งให้ทำงานเฉพาะกล่องข้อความที่อยู่ (footer-address) ตัวที่ 2 เท่านั้น */
+.footer-info .footer-address:nth-child(7) {
+    padding-left: 61px; /* 🟢 ตัวเลขยิ่งมาก ข้อความจะยิ่งขยับไปทางขวา ลองปรับเพิ่ม-ลดดูได้เลยครับ */
+}
