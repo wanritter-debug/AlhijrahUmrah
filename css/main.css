@@ -32,8 +32,10 @@ nav {
 }
 
 .logo img {
-    height: 50px;
+    height: 60px;
     display: block;
+    position: relative;
+    left: -210px; /* ตัวเลขติดลบยิ่งมาก โลโก้จะยิ่งเยื้องซ้าย ปรับเพิ่ม-ลดได้ตามใจชอบครับ */
 }   
 
 nav ul{
