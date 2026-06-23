@@ -483,3 +483,95 @@ nav ul li a.active {
 .footer-info .footer-address:nth-child(7) {
     padding-left: 61px; /* 🟢 ตัวเลขยิ่งมาก ข้อความจะยิ่งขยับไปทางขวา ลองปรับเพิ่ม-ลดดูได้เลยครับ */
 }
+
+/* =========================================
+   โค้ดสำหรับหน้าจอมือถือ (ขนาดไม่เกิน 768px)
+   ========================================= */
+@media screen and (max-width: 768px) {
+
+    /* 1. ปรับโครงสร้าง Flexbox จากแนวนอนให้เรียงเป็นแนวตั้ง */
+    nav, 
+    .package-section-fluid, 
+    .diy-section-fluid, 
+    .package-section-fluid-plus {
+        flex-direction: column !important;
+        height: auto !important;
+        padding: 20px !important;
+    }
+
+    /* 2. จัดการส่วนเมนู (Navigation) */
+    nav {
+        height: auto !important;
+        justify-content: center;
+        gap: 15px;
+    }
+    nav ul {
+        width: 100% !important;
+        flex-direction: column; /* เรียงเมนูลงมาเป็นแนวตั้งบนมือถือ */
+        gap: 10px;
+        margin: 0 !important;
+    }
+    nav ul li {
+        margin-right: 0 !important; /* ล้างระยะห่างเดิม */
+    }
+
+    /* 3. ปรับขนาดรูปภาพและกล่องสีเทาไม่ให้ล้นจอ */
+    .package-image, .diy-image {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    
+    .image-bg, .image-bg-reverse {
+        width: 100% !important;   /* เปลี่ยนจาก 763px เป็นเต็มจอพอดี */
+        height: 400px !important;  /* ลดความสูงลงมาให้เหมาะกับมือถือ */
+        border-radius: 40px !important; /* ลดความโค้งมนลงหน่อย */
+    }
+
+    .package-image img, .image-bg-reverse img {
+        width: 100% !important;
+        height: 100% !important;
+        position: relative !important; /* ปลดล็อกตําแหน่ง Absolute เพื่อให้รูปอยู่ในกล่อง */
+        top: 0 !important;
+        left: 0 !important;
+        border-radius: 40px !important;
+    }
+
+    /* 4. จัดการฝั่งข้อความและเนื้อหา */
+    .package-content, .diy-content, .package-content-center {
+        padding: 20px 10px !important; /* ล้างการดันพิกเซลเยอะๆ ออก */
+        text-align: center !important;
+    }
+
+    .package-content h2, .diy-content h2, .package-content-center h2 {
+        margin: 20px 0 !important;
+        font-size: 26px !important; /* ลดขนาดตัวอักษรลงมา */
+    }
+
+    /* 5. ล้างระยะเยื้อง (Margin/Padding) ที่เคยดันไว้ในคอม */
+    .diy-content h2,
+    .diy-content .servive-icons,
+    .diy-price,
+    .diy-btn,
+    .package-price,
+    .btn-more,
+    .package-content-center .package-price,
+    .package-content-center .btn-more,
+    .footer-info {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        align-self: center !important; /* จัดปุ่มให้อยู่ตรงกลางจอ */
+    }
+
+    .servive-icons, .service-icon-plus {
+        justify-content: center !important;
+        margin-left: 0 !important;
+    }
+
+    /* 6. ปรับส่วนท้ายเว็บ (Footer) */
+    .footer-address {
+        flex-direction: column !important; /* ให้หัวข้อกับที่อยู่ซ้อนกันแนวตั้ง */
+    }
+    .footer-info .footer-address:nth-child(7) {
+        padding-left: 0 !important; /* ล้างระยะเยื้องของที่อยู่อันที่สอง */
+    }
+}
