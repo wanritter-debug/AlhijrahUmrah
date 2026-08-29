@@ -9,17 +9,19 @@
 }
 
 body {
-    width: 1510px;
-    margin: 0 auto; /* จัดทั้งหน้าเว็บให้อยู่กึ่งกลางหน้าจอคอมพิวเตอร์ */
+    width: 100%;             /* 🟢 เปลี่ยนเป็น 100% เพื่อให้กว้างพอดีหน้าจอเสมอ */
+    max-width: 1530px;       /* 🟢 จำกัดความกว้างสูงสุดไม่เกิน 1530px */
+    margin: 0 auto;          /* จัดให้อยู่กึ่งกลางหน้าจอ */
     background-color: #ffffff;
+    overflow-x: hidden;      /* 🟢 เติมเครื่องหมาย ; ปิดท้ายคำสั่ง */
 }
 
 /* --- Hero Header Style --- */
 .hero-header {
-    width: 1510px;
-    height: 730px;
-    background: url('../img/sam-riz-ceNCWYqL8DY-unsplash\ 1.svg') no-repeat center center;
-    background-size: cover;
+    width: 100%;
+    height: 670px;
+    background: url('../img/sam-riz-ceNCWYqL8DY-unsplash\ 2.svg') no-repeat center center;
+    background-size: 100% 100%;
     position: relative;
 }
 
@@ -29,7 +31,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 30px 60px 80px 60px;
+    padding: 30px 60px 80px 25px;
 }
 
 /* --- Navigation Bar --- */
@@ -72,11 +74,11 @@ body {
 .header-title {
     align-self: flex-end;
     margin-right: 50px;
-    margin-bottom: 150px;
+    margin-bottom: 340px;
 }
 
 .header-title h1 {
-    font-size: 38px;
+    font-size: 32px;
     font-weight: 600;
     color: #FFFFFF;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
@@ -85,21 +87,23 @@ body {
 .package-section-fluid {
     display: flex;
     width: 100%;
-    margin-top: 166px; 
+    margin-top: 50px; 
     padding-bottom: 100px;
 }
 
 /* --- จัดการฝั่งซ้าย (รูปภาพ) --- */
 .package-image {
-    flex: 1;            /* แบ่งพื้นที่ฝั่งซ้าย */
+    flex: 0 0 auto;
     display: flex;
     justify-content: flex-start; /* สั่งให้ชิดซ้ายสุดของเว็บบราวเซอร์ */
     position: relative;
+    margin-top: 40px;
+    padding-left: 265px;
 }
 
 .image-bg {
-    width: 763px;
-    height: 1036px;           /* ปรับความกว้างของกล่องเทาตามความเหมาะสม */
+    width: 334px;
+    height: 454px;           /* ปรับความกว้างของกล่องเทาตามความเหมาะสม */
     background-color: #D9D9D9;  /* ใส่สีเทาอ่อนแบบในดีไซน์ */
     border-radius: 141px; /* มนเฉพาะด้านขวา ส่วนด้านซ้ายตัดตรงชนขอบจอ */
     position: relative;         
@@ -107,13 +111,13 @@ body {
 }
 
 .package-image img {
-    width: 741px;
-    height: 1113px;
+    width: 334px;
+    height: 454px;
     object-fit: cover;
     border-radius: 141px; /* 🟢 ทำมุมโค้งมนขนาดใหญ่แบบในรูปตัวอย่าง */
     position: absolute;
-    top: -45px;
-    left: 125px;
+    top: 25px;
+    left: 25px;
 }
 
 /* --- จัดการฝั่งขวา (เนื้อหา) --- */
@@ -121,16 +125,17 @@ body {
     flex: 1;                    /* แบ่งพื้นที่ฝั่งขวา */
     display: flex;
     flex-direction: column;     /* สั่งให้เนื้อหาเรียงจาก บน-ลง-ล่าง */
-    padding-left: 140px;        /* เว้นระยะห่างหลบจากรูปภาพฝั่งซ้าย */
+    max-width: 680px;
+    padding-left: 80px;        /* เว้นระยะห่างหลบจากรูปภาพฝั่งซ้าย */
     padding-right: 10%;         /* เว้นระยะฝั่งขวาไว้ 10% กันข้อความหลุดขอบจอ */
-    padding-top: 112px;          /* ดันหัวข้อลงมาให้เริ่มในระดับเดียวกับรูปภาพตึก */
+    padding-top: 100px;          /* ดันหัวข้อลงมาให้เริ่มในระดับเดียวกับรูปภาพตึก */
 }
 
 .package-content h2 {
-    font-size: 35px;
+    font-size: 24px;
     font-weight: 380;
     color: #111111;
-    margin-bottom: 85px; /* เว้นระยะจากหัวข้อลงมาหาไอคอน */
+    margin-bottom: 15px; /* เว้นระยะจากหัวข้อลงมาหาไอคอน */
 }
 
 
@@ -138,16 +143,17 @@ body {
 .servive-icons {
     display: flex;
     flex-wrap: wrap;
-    gap: 27px;                  /* ระยะห่างระหว่างกล่องไอคอน */
-    margin-bottom: 35px;
+    gap: 18px;                  /* ระยะห่างระหว่างกล่องไอคอน */
+    max-width: 500px;
+    margin-bottom: 5px;
 }
 
 /* สร้างกล่องสีเทาอ่อนขอบโค้งมนรอบไอคอน */
 .icon-item {
-    width: 85px;
-    height: 85px;
+    width: 50px;
+    height: 50px;
     background-color: #D9D9D9;  
-    border-radius: 24px;        
+    border-radius: 18px;        
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,31 +161,31 @@ body {
 }
 
 .icon-item img {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     display: block;
     position: absolute;
-    bottom: -18px;
-    right: -18px;
+    bottom: -12px;
+    right: -12px;
 }
 
 /* ข้อความอธิบายรายละเอียด */
 .package-detail {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.7;
     color: #555555;
-    margin-top: 95px;
-    margin-bottom: 75px;
+    margin-top: 25px;
+    margin-bottom: 20px;
 }
 
 /* โซนราคา */
 .package-price {
     font-size: 20px;
     color: #333333;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;    /* จัดให้ตัวหนังสือทุกคำอยู่ในแนวราบตรงกัน */
-    padding-left: 110px;     /* ใช้ padding-left แทน margin เพื่อดันให้ขยับไปทางขวา */
+    padding-left: 112px;     /* ใช้ padding-left แทน margin เพื่อดันให้ขยับไปทางขวา */
 }
 
 .package-price span {
@@ -209,10 +215,13 @@ body {
 .diy-section-fluid {
     display: flex;
     width: 100%;
-    max-width: 100%;         /* มั่นใจว่าไม่มีอะไรมาจำกัดความกว้าง */
-    margin-top: 166px;     /* เว้นระยะห่างลงมาจากส่วน Full Package ข้างบน */
+    max-width: 1000px;
+    overflow: visible;
     padding-bottom: 100px;
-    overflow: visible;        /* ป้องกันไม่ให้ภาพส่วนเกินดันหน้าเว็บจนเกิดสกรอลบาร์แนวนอน */
+    
+    /* 🟢 ปรับระยะขยับทั้งเซกชันตรงนี้ */
+    margin-top: 125px !important;   /* เพิ่มตัวเลขเพื่อดันทั้งเซกชัน "ลงด้านล่าง" (เดิม 60px) */
+    margin-left: 270px !important;   /* เพิ่มตัวเลขเพื่อดันทั้งเซกชันไปทาง "ขวา" */
 }
 
 /* ควบคุมพื้นที่ฝั่งข้อความ DIY (ฝั่งซ้าย) */
@@ -220,36 +229,53 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding-left: 10%;     /* เว้นระยะฝั่งซ้ายจอ */
-    padding-right: 40px;  /* ดันระยะห่างจากขอบรูปภาพฝั่งขวา */
-    padding-top: 112px;    /* ปรับระดับความสูงให้บาลานซ์กับกล่องรูป */
+    align-items: center !important; /* จัดองค์ประกอบภายในให้อยู่กึ่งกลางตามภาพ */
+    text-align: center;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 50px;
+    margin-left: 60px !important;  /* เพิ่มตัวเลขเพื่อดันทั้งกล่องไปทาง "ขวา" */
+    margin-top: 50px !important;   /* เพิ่มตัวเลขเพื่อดันทั้งกล่องลงมา "ด้านล่าง" */
 }
 
 .diy-content h2 {
-    margin-left: 165px;    /* ปรับเพิ่ม-ลดตัวเลขพิกเซลได้ตามต้องการ */
-    margin-top: 50px
-
-    
+    margin-left: 0 !important;
+    margin-top: 0 !important;
 }
 
 .diy-content .servive-icons {
-    margin-left: 220px;    /* ใส่ตัวเลขให้เท่ากับตัวบน เพื่อให้แนวตั้งตรงกันพอดี */
+    margin-left: 0 !important;
+    justify-content: center;
 }
 
 /* ขยับราคาฝั่ง DIY ให้ชิดซ้ายตรงกับหัวข้อ */
 .diy-price {
-    padding-left: 170px !important;
+    display: block !important;
+    white-space: nowrap !important;   /* ล็อกไม่ให้คำว่า "บาท" ตกบรรทัด */
+    margin-left: -105px !important;    /* 🟢 ตัวเลขติดลบยิ่งมาก ข้อความจะยิ่งขยับมาทางซ้าย */
+    margin-top: -10px !important;
+    margin-bottom: 25px !important;
+    text-align: left !important;
+}
+
+.diy-btn, 
+.diy-content .btn-more {
+    margin-left: 0 !important;
+    align-self: center !important;
 }
 
 .diy-price span {
     font-size: 24px;
     font-weight: 380;
     color: #000000;
+    margin: 0 5px;
+    display: inline !important;
 }
 
 /* ล้างระยะเยื้องซ้ายของปุ่ม เพื่อให้ตรงกับโครงสร้างฝั่งซ้าย */
 .diy-btn {
-    margin-left: 168px !important;
+    margin-left: 165px !important;
+    align-self: flex-start !important;
 }
 
 /* ควบคุมพื้นที่รูปภาพฝั่ง DIY (ฝั่งขวา) */
@@ -258,27 +284,32 @@ body {
     display: flex;
     justify-content: flex-end; /* ผลักรูปให้ไปชิดขวาสุดของหน้าจอ */
     position: relative;
+    
 }
 
 /* กล่องสีเทาหลังรูป มนเฉพาะด้านซ้าย */
 .image-bg-reverse {
-    width: 763px;
-    height: 1036px;
+    width: 334px;
+    height: 454px;
     background-color: #D9D9D9;
-    border-radius: 141px; /* มนเฉพาะด้านซ้ายบนและซ้ายล่าง */
+    border-radius: 141px;
     position: relative;
     display: block;
+    margin-top: -40px;
+    
+    /* 🟢 เพิ่มคำสั่งนี้เข้าไปเพื่อขยับรูปโดม + กล่องเทา โดยไม่ดันข้อความ */
+    transform: translate(-200px, 55px) !important;
 }
 
 /* จัดตำแหน่งรูปภาพบนกล่องเทา */
 .image-bg-reverse img {
-    width: 736px;
-    height: 1210px;
-    object-fit: cover;
-    border-radius: 141px;
+    width: 334px;
+    height: 520px;
+    object-fit: contain;
+    border-radius: 0px;
     position: absolute;
-    top: -118px;
-    left: -50px; /* สั่งขยับอิงจากขอบขวาเข้ามา */
+    top: -50px;
+    left: -65px; /* สั่งขยับอิงจากขอบขวาเข้ามา */
 }
 
 .package-section-fluid-plus {
